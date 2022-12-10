@@ -1,0 +1,89 @@
+/* .App {
+  text-align: center;
+  
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.field{
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  height: 4rem;
+
+}
+.label,.label-sm{
+  position: absolute;
+  top: 50%;
+  color: #7b7684;
+  pointer-events: none;
+  transition: all 0.35s;
+}
+.label{
+  left: 0;
+  transform: translate(0,-50%);
+}
+.label-sm{
+right: 0;
+transform: translate(3rem,-50%);
+width: 6rem;
+font-size: 0.75rem;
+text-align:right;
+opacity: 0;
+transition: all 0.35s;  
+}
+input{
+  height: inherit;
+  width: 16rem;
+  border: 0;
+  border-bottom: 2px solid #2e2a33;
+  outline: none;
+  background: transparent;
+  color:#f7f7f7;
+  font-size: 1rem;
+  transition: all 0.35s;
+}
+input:focus{
+  border-bottom-color:aliceblue;
+}
+input:focus ~ .label {
+  opacity: 0;
+  transform: translate(-3rem,-50%);
+}
+
+input:focus ~ .label-sm {
+  opacity: 1;
+  transform: translate(0,-50%);
+} */
