@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 function Converter() {
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState(0);
   const [convertedvalue, setConvertedvalue] = useState(0);
   const [dropdown, setdropdown] = useState([]);
   const [sender_name, setSender_name] = useState("");
@@ -21,7 +21,7 @@ function Converter() {
   };
   const dropdownlist = async () => {
     await axios
-      .post("http://127.0.0.1:4001/purpose/dropdown")
+      .post("/purpose/dropdown")
       .then((response) => {
         setdropdown(response.data);
       });
@@ -29,7 +29,7 @@ function Converter() {
   const sendInfo = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/logs/send", {
+      await axios.post("http://127.0.0.1:4001/logs/send", {
         sent_amount: amount,
         rec_amount: convertedvalue * amount,
         sender_name: sender_name,
