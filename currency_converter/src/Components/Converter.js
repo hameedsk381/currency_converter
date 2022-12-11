@@ -29,7 +29,7 @@ function Converter() {
   const sendInfo = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://127.0.0.1:4001/logs/send", {
+      await axios.post("/logs/send", {
         sent_amount: amount,
         rec_amount: convertedvalue * amount,
         sender_name: sender_name,
@@ -45,7 +45,7 @@ function Converter() {
   };
   const result = async () => {
     await axios
-      .post("http://127.0.0.1:4001/currency/usd")
+      .post("/currency/usd")
       .then((response) => setConvertedvalue(response.data.dollarexchangeRate))
       .catch((error) => console.log("error", error));
   };
