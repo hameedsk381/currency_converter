@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
 function Converter() {
-  const [amount, setAmount] = useState("");
+  const [amount, setAmount] = useState(" ");
   const [convertedvalue, setConvertedvalue] = useState(0);
   const [dropdown, setdropdown] = useState([]);
   const [sender_name, setSender_name] = useState("");
