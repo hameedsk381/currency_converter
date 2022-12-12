@@ -20,7 +20,12 @@ function Converter() {
     setAmount(e.target.value);
   };
   const dropdownlist = async () => {
-    await axios
+    // await axios
+    //   .post("http://localhost:4001/purpose/dropdown")
+    //   .then((response) => {
+    //     setdropdown(response.data);
+    //   });
+      await axios
       .post("/purpose/dropdown")
       .then((response) => {
         setdropdown(response.data);
@@ -29,6 +34,13 @@ function Converter() {
   const sendInfo = async (e) => {
     e.preventDefault();
     try {
+      // await axios.post("http://localhost:4001/logs/send", {
+      //   sent_amount: amount,
+      //   rec_amount: convertedvalue * amount,
+      //   sender_name: sender_name,
+      //   receiver_name: receiver_name,
+      //   purpose: purpose,
+      // });
       await axios.post("/logs/send", {
         sent_amount: amount,
         rec_amount: convertedvalue * amount,
@@ -44,7 +56,11 @@ function Converter() {
     // swl("Submitted succesfully")
   };
   const result = async () => {
-    await axios
+    // await axios
+    //   .post("http://localhost:4001/currency/usd")
+    //   .then((response) => setConvertedvalue(response.data.dollarexchangeRate))
+    //   .catch((error) => console.log("error", error));
+      await axios
       .post("/currency/usd")
       .then((response) => setConvertedvalue(response.data.dollarexchangeRate))
       .catch((error) => console.log("error", error));

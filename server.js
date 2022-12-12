@@ -3,7 +3,7 @@ import { router } from "./routes/convertRoute.js";
 import cors from "cors";
 import mongoose from "mongoose";
 import { purposeRouter } from "./routes/purposeRouter.js";
-import { exchangeRate } from "./controllers/convertcontroller.js";
+
 import { infoRouter } from "./routes/logsRoute.js";
 import bodyParser from "body-parser";
 import path from "path";
@@ -16,11 +16,11 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 const __dirname = path.resolve();
 mongoose.connect(
-  process.env.MONGODB_URI,
+  "mongodb+srv://hameed381:hameed3812@cluster0.l6plzgu.mongodb.net/tayseer",
   {
     useNewUrlParser: true,
   },
-  exchangeRate,
+
   (err) => {
     if (!err) {
       console.log("MongoDB Connection Succeeded.");

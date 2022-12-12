@@ -5,11 +5,14 @@ const Translist = () => {
   const [translist, setTranslist] = useState([]);
 
   const getTransactions = async () => {
-    await axios.get("/logs/gettxns").then((response) => {
-      setTranslist(response.data);
-    });
-  };
-
+  //   await axios.get("http://localhost:4001/logs/gettxns").then((response) => {
+  //     setTranslist(response.data);
+  //   });
+  // };
+  await axios.get("/logs/gettxns").then((response) => {
+    setTranslist(response.data);
+  });
+};
   useEffect(() => {
     getTransactions();
   }, []);
