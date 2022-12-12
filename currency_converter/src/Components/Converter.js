@@ -9,7 +9,7 @@ import axios from "axios";
 
 
 function Converter() {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
   const [convertedvalue, setConvertedvalue] = useState(0);
   const [dropdown, setdropdown] = useState([]);
   const [sender_name, setSender_name] = useState("");
