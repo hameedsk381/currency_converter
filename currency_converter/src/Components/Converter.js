@@ -7,7 +7,6 @@ import Row from "react-bootstrap/Row";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 
-
 function Converter() {
   const [amount, setAmount] = useState("");
   const [convertedvalue, setConvertedvalue] = useState(0);
@@ -25,11 +24,9 @@ function Converter() {
     //   .then((response) => {
     //     setdropdown(response.data);
     //   });
-      await axios
-      .post("/purpose/dropdown")
-      .then((response) => {
-        setdropdown(response.data);
-      });
+    await axios.post("/purpose/dropdown").then((response) => {
+      setdropdown(response.data);
+    });
   };
   const sendInfo = async (e) => {
     e.preventDefault();
@@ -60,7 +57,7 @@ function Converter() {
     //   .post("http://localhost:4001/currency/usd")
     //   .then((response) => setConvertedvalue(response.data.dollarexchangeRate))
     //   .catch((error) => console.log("error", error));
-      await axios
+    await axios
       .post("/currency/usd")
       .then((response) => setConvertedvalue(response.data.dollarexchangeRate))
       .catch((error) => console.log("error", error));
